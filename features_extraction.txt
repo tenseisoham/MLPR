@@ -1,0 +1,18 @@
+is the day a celebration day? 
+is the day a non-veg day? 
+what day of the week is it? 
+is it a bogo day? 
+is it a weekend or a friday?
+is there exam? 
+what's the timetable? 
+is there a guest on campus? 
+infrastructure/raw meterials availability? - supply side feature
+is there an event? what's the timing?
+footfall? 
+fasting periods?
+menu item
+diseases like contagious flu?
+is adam open? 
+semester timing?
+is north open?
+gym footfall?
