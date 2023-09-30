@@ -16,3 +16,4 @@ is adam open?
 semester timing?
 is north open?
 gym footfall?
+how many students are available on theat day?
