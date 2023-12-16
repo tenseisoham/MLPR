@@ -31,7 +31,6 @@ def preprocess(day, meal_type):
         meal_type_Dinner = 1
     return day_Saturday, day_Sunday, meal_type_Breakfast, meal_type_Lunch, meal_type_Dinner
 
-# Prediction function
 def predict_footfall(bogo, paneer, day, guest, test, max_possible_footfall, meal_type):
     day_Saturday, day_Sunday, meal_type_Breakfast, meal_type_Lunch, meal_type_Dinner = preprocess(day, meal_type)
     X = pd.DataFrame({
@@ -46,7 +45,6 @@ def predict_footfall(bogo, paneer, day, guest, test, max_possible_footfall, meal
         "meal_type_Lunch": [meal_type_Lunch],
         "meal_type_Dinner": [meal_type_Dinner]
     })
-    # ensuring the data types are correct
     X = X.astype({"bogo": "bool", 
                   "paneer": "bool", 
                   "day_Saturday": "bool", 
@@ -61,10 +59,8 @@ def predict_footfall(bogo, paneer, day, guest, test, max_possible_footfall, meal
 
     return int(prediction)
 
-# Define output component
 predicted_footfall = Label(label="Predicted Footfall")
 
-# Build the Gradio interface
 interface = Interface(
     fn=predict_footfall,
     inputs=[bogo, paneer, day, guest, test, max_possible_footfall, meal_type],
@@ -72,5 +68,4 @@ interface = Interface(
     title="Plaksha University Footfall Prediction"
 )
 
-# Launch the Gradio interface
 interface.launch(share=True)
